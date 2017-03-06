@@ -1,7 +1,232 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Living Styleguide | Stijn Hoeks</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+	<li class="desktop"><a href="">LIVING STYLEGUIDE</a></li>
+    <ul role="tablist">
+        <li role="presentation"><a href="#main-content" id="home_tab" role="tab" aria-selected="true" aria-controls="main-content" aria-label="Home, current page">HOME</a></li>
+        <li role="presentation"><a href="#products" id="products_tab" role="tab" aria-controls="products">PRODUCTS<span id="arrow"></span></a>
+            <ul role="tablist">
+                <li role="presentation"><a href="#rock" id="rock_tab" role="tab" aria-controls="rock">ROCK</a></li>
+                <li role="presentation"><a href="#paper" id="paper_tab" role="tab" aria-controls="paper">PAPER</a></li>
+                <li role="presentation"><a href="#scissors" id="scissors_tab" role="tab" aria-controls="scissors">SCISSORS</a></li>
+            </ul>
+        </li>
+        <li role="presentation"><a href="/about" id="about_tab" role="tab" aria-controls="about">ABOUT</a></li>
+        <li role="presentation"><a href="/contact" id="contact_tab" role="tab" aria-controls="contact">CONTACT</a></li>
+        <li id="login" role="presentation">
+        	<!-- LOGIN -->
+			<form href="login" action="/" method="post" id="login_tab" role="tab" aria-controls="login">
+			    <label for="field-email">email</label>
+			    <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
+
+			    <label for="field-password">password</label>
+			    <input type="password" id="field-password" name="field-password" required>
+
+			    <button type="submit">LOGIN</button>
+
+				<input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
+			    <label for="field-stay-logged-in">Stay<br />logged in</label>
+			    <a href="forgot" id="password_tab" role="tab" aria-controls="forgot">Forgot<br />password</a>
+
+			</form>
+        </li>
+    </ul>
+
+</nav>
+
+
+
+
+<section id="main-content">
+
+	<h1 class="mobile">LIVING STYLEGUIDE</h1>
+
+
+	<!-- MEDIA ITEM -->
+	<article id="media_item">
+		<a href="/"></a><h2>HTML5 accessibility, are block links hurting accessibility?</h2>
+		<div id="lightbox">
+			<div class="spinner">
+				<div></div>
+			</div>
+			<img src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg" alt="A colorful crayon drawing on the hood of a car." />
+		</div>
+
+		<p>It is conforming in HTML5 for links to include block level elements such as headings <span class="amp">&amp;</span> paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+	</article>
+
+	<!-- PICTURE WITH SUBTITLE -->
+
+	<article id="media_big">
+		<figure>
+			<div></div>
+			<h2>This picture<br />has a title</h2>
+			<!-- Portrait
+			<img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
+			
+			Landscape
+			<img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+			
+			<figcaption>
+				<p>
+					There's also this big <span class="amp">&amp;</span> in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+				</p>
+				<footer>
+					<time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl"><b><br />Vasilis van Gemert</b></a>
+				</footer>
+			</figcaption>
+		</figure>
+	</article>
+
+	<!-- RATING -->
+	<fieldset id="rating">
+	    <legend>Rating</legend>
+
+	    <label for="rating-0">
+	    	<input type="radio" name="rating" id="rating-0">
+	        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+	        	<circle cx="32" cy="32" r="30" fill="#ef5350"/><path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"/><g fill="#333333"><path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"/><path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"/></g><path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"/><g fill="#333333"><path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"/><path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"/></g>
+	        	<g class="smile">
+		        	<path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#333333"/>
+		        </g>
+	        </svg>
+	        Sad!
+	    </label
+	    ><label for="rating-1">
+	    	<input type="radio" name="rating" id="rating-1">
+	        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+	        	<path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"/><g fill="#664e27"><circle cx="42.4" cy="24.7" r="5"/><circle cx="19.7" cy="28.7" r="5"/></g>
+	        	<g class="smile" fill="#664e27">
+	        		<path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"/>
+	        	</g>
+
+	        </svg>
+	        Meh
+	    </label
+	    ><label for="rating-2">
+	    	<input type="radio" name="rating" id="rating-2">
+	        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/>
+	        	<g fill="#664e27">
+	        		<circle cx="20.5" cy="26.6" r="5"/><circle cx="43.5" cy="26.6" r="5"/>
+	        	</g>
+	        	<g class="smile" fill="#664e27">
+	        		<path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"/>
+	        	</g>
+	        </svg>
+	        Nice
+	    </label
+	    ><label for="rating-3">
+	    	<input type="radio" name="rating" id="rating-3">
+	        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+	        	<g fill="#664e27"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><circle cx="20.5" cy="23" r="5"/><circle cx="43.5" cy="23" r="5"/></g>
+	        	<g class="smile">
+	        		<path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"/><path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"/><path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"/><path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"/>
+	        	</g>
+        	</svg>
+	        		
+	        Fantastic!
+	    </label>
+
+
+	</fieldset>
+
+	<!-- CHAT -->
+	<ol id="chat">
+		<h2>CHAT</h2>
+
+	    <li data-type="SEND">
+
+	        <p>
+	            Hey!
+	        </p>
+
+	        <footer>
+	            <p>Posted on by you</p><p data-status="READ"><span>Has been read</span></p><time datatime="2015-01-22T10:25">10:25 AM</time>
+	            
+	        </footer>
+
+	    </li>
+	    <li data-type="RECEIVE">
+
+	        <p>
+	            Hey! Sorry I was busy
+	        </p>
+
+	        <footer>
+	            <p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+	        </footer>
+
+	    </li>
+	    <li data-type="SEND">
+
+	        <p>
+	            I sent that 2 years ago
+	        </p>
+
+	        <footer>
+	            <p>Posted on by you</p><p data-status="DELIVERED"><span>Has been delivered<span></p><time datatime="2017-02-03T14:22">2:22 PM</time>
+	        </footer>
+
+	    </li>
+		<form action="/" method="post">
+
+		    <label for="field-message">Message</label>
+		    <textarea class="tabs__tabcontent" name="field-message" id="field-message"></textarea>
+
+		    <button type="submit">Send</button>
+
+		</form>
+	</ol>
+
+
+	<!-- STEP INDICATOR -->
+	<nav id="order">
+
+		<div></div>
+
+	    <ol>
+		    <h2>Finish your order</h2>
+		    <progress value="0.25" max="1"></progress>
+	        <li>
+	            <a href="/cart" aria-label="cart, complete">Cart</a>
+	        </li
+	        ><li>
+	            <a href="#main-content" aria-label="Address, current step">Address</a>
+	        </li
+	        ><li>
+	            Payment
+	        </li
+	        ><li>
+	            Confirm
+	        </li>
+	    </ol>
+
+	    <!-- LOGIN -->
+
+	</nav>
+
+
+</section>
+
+<script src="aria/client.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+<!-- <script src="http://a11y.nicolas-hoffmann.net/tabs/js/jquery-accessible-tabs.js"></script> -->
+
 </body>
 </html>

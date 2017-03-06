@@ -1,2 +1,3 @@
-# StijnHoeks.github.io
-Preview page
+# Components
+
+Rating example makes use of Emoji from: http://emojione.com
