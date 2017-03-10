@@ -128,10 +128,9 @@ var section = {
 }
 
 aja()
-	.url('http://cdn.knmi.nl/knmi/map/page/seismologie/all_tectonic.json')
+	.url('//cdn.knmi.nl/knmi/map/page/seismologie/all_tectonic.json')
 	.type('json')
 	.on('success', function(data){
 		app.init(data);
 	})
 .go();
-
